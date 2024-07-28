@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col justify-center items-center h-screen bg-black">
+    <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" alt="bulb" id="bulb" class="h-72"/>
+    <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" alt="cat" id="cat" class="h-56 mr-7"/>
+    <div class="bg-cyan-300 py-4 px-9 rounded-lg my-5 space-y-2" >
+        <p id="cont" class="text-center font-semibold"  > Switch Off</p>
+        <div class="flex gap-5">
+            <button id="on" class="bg-cyan-400 px-4 py-1 rounded-md"> On</button>
+            <button id="off" class="bg-cyan-400 px-4 py-1 rounded-md" > Off</button>
+        </div>
+    </div>
+
+    <script>
+        const cat = document.getElementById("cat")
+        const bulb = document.getElementById("bulb")
+        const cont = document.getElementById("cont")
+        const on = document.getElementById("on")
+        const off = document.getElementById("off")
+
+        off.addEventListener("click",()=>{
+            cat.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png"
+            bulb.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png"
+            cont.textContent = "Switch On"
+            console.log(cat)
+            console.log(bulb)
+            console.log(cont)
+        })
+        on.addEventListener("click",()=>{
+            cat.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png"
+            bulb.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png"
+            cont.textContent = "Switch Off"
+            console.log(cat)
+            console.log(bulb)
+            console.log(cont)
+        })
+
+    </script>
+</body>
+</html>
